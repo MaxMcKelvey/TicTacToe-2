@@ -1,0 +1,10 @@
+.row {
+    /* display: inline-grid;
+    grid-template-columns: auto auto auto; */
+    /* display: table; */
+    display: flex;
+    flex-direction: row;
+}
+.board {
+    padding: 5px;
+}
