@@ -14,6 +14,8 @@ Developing this program took me about two hours. If I were to continue developme
 2. I would improve the 'tie' seeking behavior to include boards which cannot be won but still have empty squares, because my implementation only resets boards which are empty.
 3. I would allow the meta game to end in a tie, I didn't have time to implement this feature so there is a theoretical stalemate situation where no player can play because every board is won but the boards form a meta-tie.
 4. I would make the code more organized; I wrote based off of my initial outline but some of the later features felt stuck-into the existing code rather than being planned for.
+5. I would allow for either player to be played by the computer.
+6. I would allow for the user to decide which player goes first.
 
 ### The Computer
 
