@@ -6,7 +6,7 @@ I will create two different main components, a `tictactoe` component and a `box`
 
 ## Actual Implementation
 
-I followed through with my hypothetical recursive approach. It worked ...
+I followed through with the recursive approach, and it worked as intended. However there were a few challenges I encountered. Notably I had to ensure that the user couldn't select cells that were unavailable for a variety of reasons. I solved this problem by using a series of guarding statements in the handleClick function, preventing unwanted user input.
 
 Developing this program took me about two hours. If I were to continue development, I would make a few changes.
 
@@ -24,3 +24,7 @@ I believe that I used the optimal computer player algorithm, which chooses a ran
 ## Running the Implementation
 
 In this folder open the terminal and run `npm start`.
+
+## Final Notes
+
+I would be happy to come in to talk through my solution if you have further questions!
