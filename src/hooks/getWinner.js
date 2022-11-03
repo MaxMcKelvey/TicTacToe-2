@@ -1,3 +1,5 @@
+// returns the character of the winning player in a
+// 9x9 game of tictactoe, and ' ' if there is no winner
 export const getWinner = (board) => {
     for (let i = 0; i < 3; i++) {
         if (board[3*i] === board[(3*i)+1] && board[3*i] === board[(3*i)+2] && board[3*i] !== ' ') return board[3*i];

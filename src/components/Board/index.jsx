@@ -1,5 +1,7 @@
 import "./Board.css";
 
+// creates a 3x3 grid of 'children' with the
+// passed in getChild lambda
 const Board = (props) => {
     
     return (

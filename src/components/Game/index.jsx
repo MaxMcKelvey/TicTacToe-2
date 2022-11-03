@@ -6,9 +6,8 @@ import Board from "../Board";
 import Box from "../Box";
 import "./Game.css";
 
+// creates a game of tictactoes inside a game of tictactoe
 const Game = () => {
-    const [, updateState] = React.useState();
-
     const blankBoardSmall = () => {
         let arr = [];
         for (let i = 0; i < 9; i++) {
@@ -16,7 +15,7 @@ const Game = () => {
         }
         return arr;
     }
-
+    
     const blankBoardLarge = () => {
         const arr = [];
         for (let i = 0; i < 9; i++) {
@@ -24,17 +23,18 @@ const Game = () => {
         }
         return arr;
     }
-
+    
+    const [, updateState] = useState();
     const [boxArr, setBoxArr] = useState(blankBoardLarge());
     const [currentPlayer, setCurrentPlayer] = useState('X');
     const [winningPlayer, setWinningPlayer] = useState(null);
     const [isComputerPlayer, setIsComputerPlayer] = useState(false);
 
-    const getChild1 = (position) => {
-        return <Board getChild={(index) => getChild2(position, index)} />;
+    const getSmallBoards = (position) => {
+        return <Board getChild={(index) => getBoxes(position, index)} />;
     }
 
-    const getChild2 = (position, index) => {
+    const getBoxes = (position, index) => {
         return <Box board={position} index={index} handleClick={handleClick} char={boxArr[position][index]}/>;
     }
 
@@ -78,10 +78,6 @@ const Game = () => {
         if (winner !== ' ') setWinningPlayer(winner);
     }
 
-    const handleCheck = () => {
-        setIsComputerPlayer(!isComputerPlayer);
-    }
-
     const resetBoard = () => {
         setBoxArr(blankBoardLarge());
         setCurrentPlayer('X');
@@ -95,7 +91,7 @@ const Game = () => {
                 <input
                     type="checkbox"
                     checked={isComputerPlayer}
-                    onChange={handleCheck}
+                    onChange={() => setIsComputerPlayer(!isComputerPlayer)}
                 />
                 Computer is Player O
             </label>
@@ -103,7 +99,7 @@ const Game = () => {
             <body>
                 {winningPlayer ? `Player ${winningPlayer} wins!` : `Player ${currentPlayer}'s turn`}
             </body>
-            <Board getChild={getChild1} />
+            <Board getChild={getSmallBoards} />
         </section>
     );
 }

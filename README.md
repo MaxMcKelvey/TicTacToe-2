@@ -16,6 +16,7 @@ Developing this program took me about two hours. If I were to continue developme
 4. I would make the code more organized; I wrote based off of my initial outline but some of the later features felt stuck-into the existing code rather than being planned for.
 5. I would allow for either player to be played by the computer.
 6. I would allow for the user to decide which player goes first.
+7. There are a few bugs related to async javascript, I would eliminate these.
 
 ### The Computer
 
